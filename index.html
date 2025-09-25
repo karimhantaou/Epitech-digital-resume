@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karim Hantaou</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <header>
+            <a id="about" onclick="openMenu('about')">
+                <img src="ressources/images/star.png"/>
+                <p>About</p>
+                <img src="ressources/images/star.png"/>
+            </a>
+            <a href="#" id="skills" onclick="openMenu('skills')">
+                <img src="ressources/images/star.png"/>
+                <p>Skills</p>
+                <img src="ressources/images/star.png"/>
+            </a>
+            <a href="#" id="projects" onclick="openMenu('projects')">
+                <img src="ressources/images/star.png"/>
+                <p>Projects</p>
+                <img src="ressources/images/star.png"/>
+            </a>
+            <a href="#" id="contact" onclick="openMenu('contact')">
+                <img src="ressources/images/star.png"/>
+                <p>Contact</p>
+                <img src="ressources/images/star.png"/>
+            </a>
+
+            <div>
+                <p>Karim Hantaou</p>
+                <p>My digital resume</p>
+            </div>
+        </header>
+        <main>
+            <section class="about">
+                <div class="title">
+                    <h1>Karim Hantaou</h1>
+                    <h2>Full stack dev.</h2>     
+                </div>
+                <p>
+                   Karim, 25, full-stack web & software dev. based in Montpellier, France. Obsessed with IT, brutalist minimalism, and the balance between back-end logic (brain) and front-end expression (heart).
+                </p> 
+
+                <img src="ressources/images/pfp.png"/>
+            </section>
+
+            <section class="skills">
+                <p>
+                    Proficient in multiple programming languages, web technologies, and database systems.
+                </p>
+                
+                <div>
+                    <h2>Web languages</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PHP</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Software languages</h2>
+                    <ul>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Frameworks</h2>
+                    <ul>
+                        <li>React js</li>
+                        <li>Symfony</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Data base</h2>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Work environment</h2>
+                    <ul>
+                        <li>VS Code</li>
+                        <li>Intellij</li>
+                        <li>Webstorm</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="projects">
+                <div>
+                    <img src="https://placehold.co/600x400"/>
+                    <h2>Portfolio</h2>
+                    <h5>Html, Css, Javascript</h5>
+                    <a href="#">github</a>
+                </div>
+
+                <div>
+                    <img src="https://placehold.co/600x400"/>
+                    <h2>Mineword</h2>
+                    <h5>Python, Pygame</h5>
+                    <a href="#">github</a>
+                </div>
+
+                <div>
+                    <img src="https://placehold.co/600x400"/>
+                    <h2>VideoTracker</h2>
+                    <h5>Python</h5>
+                    <a href="#">github</a>
+                </div>
+
+                <div>
+                    <img src="https://placehold.co/600x400"/>
+                    <h2>Password Manager</h2>
+                    <h5>Html, Css, Javascript, Php</h5>
+                    <a href="#">github</a>
+                </div>
+
+                <div>
+                    <img src="https://placehold.co/600x400"/>
+                    <h2>Password Manager</h2>
+                    <h5>Html, Css, Javascript, Php</h5>
+                    <a href="#">github</a>
+                </div>
+
+            </section>
+
+            <section class="contact">
+                <a href="mailto:karim.hantaou@gmail.com">karim.hantaou@gmail.com</a>
+                
+                <div class="contact-link">
+                    <a href="#">
+                        <img src="ressources/images/git.png"/>
+                    </a>
+                    <a href="#">
+                        <img src="ressources/images/linkedin.png"/>
+                    </a>
+                </div>
+                <form>
+                    Contacte me
+                    <div>
+                        <input type="text" placeholder="Last name" required>
+                        <input type="text" placeholder="First name" required>
+                    </div>
+                    <input type="text" placeholder="Email address" required>
+                    <textarea placeholder="Your message" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
