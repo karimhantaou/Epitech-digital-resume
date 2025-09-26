@@ -159,27 +159,13 @@ section .title {
 }
 
 /* Form inputs */
-.contact form input,
-.contact form textarea {
+.contact form input, .contact form textarea {
     border: none;
     border-bottom: 1px solid black;
 }
 
-.contact form input:focus,
-.contact form textarea:focus {
+.contact form input:focus, .contact form textarea:focus {
     outline: none;
-}
-
-/* Header icon image (hidden by default) */
-header a img {
-    width: 6%;
-    display: none;
-}
-
-/* Show image on anchor hover */
-a:hover img {
-    display: block;
-    animation: myAnim 1s ease infinite;
 }
 
 /* Blinking animation */
@@ -196,7 +182,6 @@ a:hover img {
 @media (max-width: 1108px) {
     html,body,main{
         height: auto;
-        overflow: auto;
     }
 
     main {
@@ -204,8 +189,12 @@ a:hover img {
         flex-direction: column;
     }
 
+    header{
+        flex-direction: column;
+        justify-content: center;
+    }
+
     section, header{
-        height: 100vh;
         padding-top: 0;
         padding-bottom: 0;
     }
