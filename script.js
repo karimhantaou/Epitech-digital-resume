@@ -24,3 +24,18 @@ function openMenu(menu){
         console.log(panel.style.height)
     }
 }
+
+
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_mw3uass", "template_yyyvmti", this)
+      .then(function(response) {
+        alert("Email sent successfully!");
+        console.log("SUCCESS!", response.status, response.text);
+      }, function(error) {
+        alert("Failed to send email. Try again.");
+        console.log("FAILED...", error);
+      });
+  });

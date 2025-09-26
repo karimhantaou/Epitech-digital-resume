@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
-
         <header>
             <div>
                 <p>Karim Hantaou</p>
@@ -158,18 +157,28 @@
                         <img src="ressources/images/linkedin.png"/>
                     </a>
                 </div>
-                <form>
+                <form id="contact-form">
                     Contacte me
-                    <div>
-                        <input type="text" placeholder="Last name" required>
-                        <input type="text" placeholder="First name" required>
-                    </div>
-                    <input type="text" placeholder="Email address" required>
-                    <textarea placeholder="Your message" required></textarea>
+                    <input type="text" name = "name" placeholder="Name" required>
+                    <input type="text" name = "user_email" placeholder="Email address" required>
+                    <textarea name = "message" placeholder="Your message" required></textarea>
                     <input type="submit" value="Submit">
                 </form>
             </section>
         </main>
         <script src="script.js"></script>
+
+        <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "exGVCHTc1o2-b5jah",
+            });
+        })();
+        </script>
+
+
     </body>
 </html>
