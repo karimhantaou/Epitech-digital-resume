@@ -194,6 +194,10 @@ section .title {
         justify-content: center;
     }
 
+    section{
+        background-color: white;
+    }
+
     section, header{
         padding-top: 0;
         padding-bottom: 0;
