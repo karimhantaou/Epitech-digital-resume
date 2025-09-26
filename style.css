@@ -25,9 +25,11 @@ body {
 
 header{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
     align-content: center;
     color:white;
+    padding-left: 10%;
 }
 
 header p{
@@ -189,10 +191,7 @@ section .title {
         flex-direction: column;
     }
 
-    header{
-        flex-direction: column;
-        justify-content: center;
-    }
+
 
     section{
         background-color: white;
