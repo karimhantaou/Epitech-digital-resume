@@ -196,15 +196,12 @@ section .title {
 
     section{
         background-color: white;
+        gap:20px;
     }
 
     section, header{
         padding-top: 0;
         padding-bottom: 0;
-    }
-
-    .skills h2 {
-        margin-bottom: 50px;
     }
 
 }
