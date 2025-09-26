@@ -12,7 +12,6 @@
     cursor: crosshair;
 }
 
-/* Base container sizing and overflow */
 html, body, main, section, .panel, header{
     height: 100vh;
 }
@@ -29,6 +28,7 @@ header{
     align-items:flex-start;
     color:white;
     padding-left: 5%;
+    padding-right: 5%;
     position: relative;
     flex-direction: column;
     gap: 5%;
@@ -51,6 +51,17 @@ header img{
     height: 20vh;
     background-color: white;
     opacity: 85%;
+}
+
+.scroll-p{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
+    font-size: 1em;
 }
 
 /* Main layout grid */
@@ -144,14 +155,21 @@ section .title {
 /* Projects section image hover effect */
 .project-img {
     width: 100%;
+    height: 100vh;
     display: none;
+
+}
+
+.project-img img{
+    width: 100%;
 }
 
 .projects div:hover > .project-img {
     position: absolute;
-    top: 30vh;
-    left: -100%;
-    display: block;
+    top: 0;
+    right: 100%;
+    display: flex;
+    align-items: center;
     z-index: 999;
 }
 
@@ -233,6 +251,11 @@ section .title {
     .panel img{
         -webkit-filter: invert(100%);
         filter: invert(100%);
+    }
+
+    .panel:hover{
+        background-color: black;
+        color:white;
     }
 
 }
