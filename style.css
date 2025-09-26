@@ -202,9 +202,6 @@ a:hover img {
     main {
         display: flex;
         flex-direction: column;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-        scroll-behavior: smooth;
     }
 
     section {
