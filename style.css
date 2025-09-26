@@ -45,8 +45,21 @@ header p{
     align-items: center;
     font-weight: lighter;
     letter-spacing: 3px;
+    transition: 0.2s all;
 }
 
+header p img{
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+    width: 30px;
+    height: 10px;
+}
+
+
+header p:hover{
+    letter-spacing: 15px;
+    font-weight: bold;
+}
 
 header img{
     height: 20vh;
@@ -117,6 +130,7 @@ section a:hover{
     background-color: white !important;
     color: black !important;
     cursor: cell;
+    letter-spacing: 150%;
 }
 
 .panel:hover img{
@@ -141,13 +155,25 @@ section .title {
 }
 
 /* Skills section headings */
-.skills h2 {
+.skills h2, .projects h2{
     margin-bottom: 10px;
     transition: all 0.1s;
+    display: flex;
+    align-items: center;
 }
 
-.skills h2:hover {
+
+.skills h2 img, .projects h2 img{
+    width: 30px;
+    height: 15px;
+}
+
+.skills h2:hover, .projects h2:hover {
     letter-spacing: 2px;
+}
+
+.skills h2:hover img, .projects h2:hover img{
+        animation: myAnim 1s ease 0s infinite normal forwards;
 }
 
 /* Skills list layout */
@@ -158,14 +184,6 @@ section .title {
     flex-wrap: wrap;
     gap: 20px;
     list-style-type: none;
-}
-
-li{
-    transition: 0.1s all;
-}
-
-.skills h2:hover + ul li {
-    letter-spacing: 3px
 }
 
 /* Projects section image hover effect */
