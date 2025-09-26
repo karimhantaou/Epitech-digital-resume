@@ -43,7 +43,8 @@ header div{
 header p{
     display: flex;
     align-items: center;
-    font-size:larger;
+    font-weight: lighter;
+    letter-spacing: 3px;
 }
 
 
