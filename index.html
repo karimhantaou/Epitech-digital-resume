@@ -7,35 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
-        <header>
-            <a id="about" onclick="openMenu('about')">
-                <img src="ressources/images/star.png"/>
-                <p>About</p>
-                <img src="ressources/images/star.png"/>
-            </a>
-            <a href="#" id="skills" onclick="openMenu('skills')">
-                <img src="ressources/images/star.png"/>
-                <p>Skills</p>
-                <img src="ressources/images/star.png"/>
-            </a>
-            <a href="#" id="projects" onclick="openMenu('projects')">
-                <img src="ressources/images/star.png"/>
-                <p>Projects</p>
-                <img src="ressources/images/star.png"/>
-            </a>
-            <a href="#" id="contact" onclick="openMenu('contact')">
-                <img src="ressources/images/star.png"/>
-                <p>Contact</p>
-                <img src="ressources/images/star.png"/>
-            </a>
 
-            <div>
-                <p>Karim Hantaou</p>
-                <p>My digital resume</p>
-            </div>
+        <header>
+            <p>Karim Hantaou</p>
+            <p>Full Stack Dev.</p>
         </header>
+
         <main>
             <section class="about">
+
+                <div class="panel" id="about" onclick="openMenu('about')">
+                    <p>About</p>
+                </div>
+
                 <div class="title">
                     <h1>Karim Hantaou</h1>
                     <h2>Full stack dev.</h2>     
@@ -44,10 +28,17 @@
                    Karim, 25, full-stack web & software dev. based in Montpellier, France. Obsessed with IT, brutalist minimalism, and the balance between back-end logic (brain) and front-end expression (heart).
                 </p> 
 
+                <!--
                 <img src="ressources/images/pfp.png"/>
+                -->
             </section>
 
             <section class="skills">
+
+                <div class="panel" id="skills" onclick="openMenu('skills')">
+                    <p>Skills</p>
+                </div>
+
                 <p>
                     Proficient in multiple programming languages, web technologies, and database systems.
                 </p>
@@ -98,6 +89,12 @@
             </section>
 
             <section class="projects">
+
+                <div class="panel" id="projects" onclick="openMenu('projects')">
+                    <p>Projects</p>
+                </div>
+
+
                 <div>
                     <img src="https://placehold.co/600x400"/>
                     <h2>Portfolio</h2>
@@ -136,6 +133,11 @@
             </section>
 
             <section class="contact">
+
+                <div class="panel" id="contact" onclick="openMenu('contact')">
+                    <p>Contact</p>
+                </div>
+
                 <a href="mailto:karim.hantaou@gmail.com">karim.hantaou@gmail.com</a>
                 
                 <div class="contact-link">

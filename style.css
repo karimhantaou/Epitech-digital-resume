@@ -1,253 +1,233 @@
-:root{
-    --background: black;
-    --text: white;
-}
-
+/* Font setup */
 @font-face {
     font-family: Nitti;
-    src:url("ressources/font/Nitti-Normal.ttf");
+    src: url("ressources/font/Nitti-Normal.ttf");
 }
 
-*{
+/* Reset and global styles */
+* {
     margin: 0;
     padding: 0;
     font-family: Nitti;
+    cursor: crosshair;
 }
 
-
-html,body,header,main,section{
+/* Base container sizing and overflow */
+html, body, main, section, .panel, header{
     height: 100vh;
-    overflow: hidden;
 }
 
-
-section a{
-    color:blue;
-}
-
-body{
+body {
     position: relative;
-    background-color: var(--background);
+    background-color: black;
 }
+
 
 header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    pointer-events: none;
-    font-size: smaller;
-}
-
-header a{
-    background-color: var(--background);
-    height: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    text-decoration: none;
-    transition: 0.5s all;
-    color:var(--text);
-    pointer-events:all;
-    z-index: 10; 
-    border-bottom: 1px solid var(--background);
+    align-content: center;
+    color:white;
 }
 
-header a:hover{
-    background-color: var(--text) !important;
-    color:var(--background) !important;
-}
-
-header div{
-    position: fixed;
-    top: 0;
-    left: 0;
-
+header p{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-    color: var(--text);
-
-    z-index: 20;
+    align-items: center;
+    font-size:x-large;
 }
 
-main{
+/* Main layout grid */
+main {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: var(--text);
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
 }
 
-section{
-    padding-top: 20%;
-    padding-left: 5%;
-    padding-right: 5%;
+/* Section layout */
+section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 50px;
+    position: relative;
 }
 
-section .title{
+/* Anchor styling inside sections */
+section a {
+    color: blue;
+}
+
+/* Fullscreen overlay panel */
+.panel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    transition: 0.2s all;
+    box-sizing: border-box;
 }
 
-.about img{
+.panel:hover{
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Title area in a section */
+section .title {
+    display: flex;
+    flex-direction: column;
+}
+
+/* About section image */
+.about img {
     width: 100%;
 }
 
-
-.skills h2{
-    transition: 0.1s all;
+/* Skills section headings */
+.skills h2 {
     margin-bottom: 10px;
+    transition: all 0.1s;
 }
 
-.skills h2:hover{
+.skills h2:hover {
     letter-spacing: 0.2em;
 }
 
-.skills ul{
+/* Skills list layout */
+.skills ul {
     width: 100%;
-    list-style-type: none;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
+    list-style-type: none;
 }
 
-.projects div{
-    position: relative;
-    z-index: 5;
-}
-
-.projects img{
+/* Projects section image hover effect */
+.projects img {
     width: 100%;
     display: none;
 }
 
-.projects div:hover > img{
-    display: block;
+.projects div:hover > img {
     position: absolute;
-    left: 0;
     top: 110%;
+    left: 0;
+    display: block;
     z-index: 30;
 }
 
-.projects div:hover{
-    z-index: 20;
-}
-
-.projects h5{
-    color:grey;
+.projects h5 {
     font-weight: lighter;
+    color: grey;
 }
 
-.contact{
-    height: 100vh;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.contact-link{
+/* Contact link container */
+.contact-link {
     display: flex;
     justify-content: center;
 }
 
-.contact a{
+/* Contact anchor styling */
+.contact a {
     display: flex;
     justify-content: center;
 }
 
-.contact-link img{
+/* Contact icons */
+.contact-link img {
     width: 45%;
-    transition: 0.1s all;
+    transition: all 0.1s;
 }
 
-.contact-link img:hover{
+.contact-link img:hover {
     transform: scale(1.5);
 }
 
-.contact form{
+/* Contact form layout */
+.contact form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.contact form input{
-    border:0;
-    border-bottom: 1px solid var(--background);
+/* Form inputs */
+.contact form input,
+.contact form textarea {
+    border: none;
+    border-bottom: 1px solid black;
 }
 
-.contact form input:focus, .contact form textarea:focus{
+.contact form input:focus,
+.contact form textarea:focus {
     outline: none;
 }
 
-.contact form textarea{
-    border:0;
-    border-bottom: 1px solid var(--background);
-}
-
-.contact form input:focus, .contact form textarea:focus{
-    outline: none;
-}
-
-header a img{
+/* Header icon image (hidden by default) */
+header a img {
+    width: 6%;
     display: none;
-    width:6%;
 }
 
-a:hover img{
-    display: block  ;
-    animation: myAnim 1s ease 0s infinite normal forwards;
+/* Show image on anchor hover */
+a:hover img {
+    display: block;
+    animation: myAnim 1s ease infinite;
 }
 
+/* Blinking animation */
 @keyframes myAnim {
-	0%,
-	50%,
-	100% {
-		opacity: 1;
-	}
-
-	25%,
-	75% {
-		opacity: 0;
-	}
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
 }
 
-
-
+/* Responsive styles for screens below 1108px */
 @media (max-width: 1108px) {
-    header{
-        display: none;
-    }
-    
-    html,body, main{
+    html,body,main{
         height: auto;
-        overflow:scroll;
+        overflow: auto;
     }
-    main{
+
+    main {
         display: flex;
         flex-direction: column;
-        gap:100px;
-    }
-    section{
-        height: auto;
-        padding-bottom: 0;
-        padding-top: 0;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
     }
 
-    .skills h2{
+    section {
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .skills h2 {
         margin-bottom: 50px;
     }
-    
 
-    .contact{
-        justify-content: flex-start;
+}
+
+
+
+@media (max-height: 700px) {
+
+    html, body, main, section, .panel, header{
+        height: 700px;
+    }
+    section{
+        min-height: 700px;
+        gap:5%;
     }
 }
