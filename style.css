@@ -204,7 +204,7 @@ a:hover img {
         flex-direction: column;
     }
 
-    section {
+    section, header{
         height: 100vh;
         padding-top: 0;
         padding-bottom: 0;
